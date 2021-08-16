@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  debian:
+    image: debian:10.10
+    working_dir: /local/ebook-tools-sandbox
+    volumes:
+      - .:/local/ebook-tools-sandbox
+
+  epr:
+    build: wustho/epr
+    volumes:
+      - .:/local/ebook-tools-sandbox
